@@ -1,0 +1,112 @@
+/*
+Theme Name: Jigar Patel Portfolio
+Author: Jigar Patel
+Description: Custom portfolio theme based on the approved Clean Corporate Minimal design.
+Version: 2.0.0
+Text Domain: jigar-portfolio
+*/
+
+:root{--blue:#1769ff;--blue2:#2384ff;--ink:#101828;--muted:#667085;--line:#e6ebf2;--soft:#f5f9ff;--white:#fff;--radius:14px;--container:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.6}a{color:inherit;text-decoration:none}img{display:block;max-width:100%;height:auto}
+.container{width:min(var(--container),calc(100% - 40px));margin:auto}
+.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-size:23px;font-weight:800;line-height:1.05}.brand span{color:var(--blue)}.brand small{display:block;color:var(--muted);font-size:11px;font-weight:600;margin-top:4px}
+.menu{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:650}.menu a:hover{color:var(--blue)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:8px;border:1px solid var(--blue);background:var(--blue);color:#fff;font-size:14px;font-weight:750;transition:.2s}.btn:hover{transform:translateY(-1px)}.btn-outline{background:#fff;color:var(--blue)}
+.hero{background:linear-gradient(135deg,#f8fbff,#edf6ff);padding:78px 0 62px}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:48px}.eyebrow{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.hero h1{font-size:clamp(42px,5vw,66px);line-height:1.03;letter-spacing:-.045em;margin:13px 0 20px}.hero h1 span{color:var(--blue)}.hero p{font-size:17px;color:#475467;max-width:650px}.actions{display:flex;gap:13px;flex-wrap:wrap;margin:28px 0}.stats{display:flex;gap:42px;margin-top:34px}.stat strong{font-size:28px;display:block;line-height:1.1}.stat span{font-size:12px;color:var(--muted)}.hero-photo{height:440px;border-radius:24px;overflow:hidden;background:#dcecff;position:relative}.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 20%}.availability{position:absolute;right:18px;bottom:20px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 18px;font-size:12px;font-weight:700;box-shadow:0 12px 30px rgba(16,24,40,.1)}.availability i{display:inline-block;width:9px;height:9px;border-radius:50%;background:#16b364;margin-right:7px}
+.section{padding:86px 0}.section-soft{background:var(--soft)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:34px}.section h2{font-size:39px;line-height:1.1;letter-spacing:-.035em;margin:7px 0}.section-intro{color:var(--muted);max-width:500px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.about-image{border-radius:18px;overflow:hidden;background:#edf2f8;min-height:340px}.about-image img{width:100%;height:100%;object-fit:cover}
+.skills-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:13px}.skill{border:1px solid var(--line);background:#fff;border-radius:12px;padding:20px 10px;text-align:center;font-weight:700;font-size:13px}.skill .icon{font-size:25px;color:var(--blue);margin-bottom:7px}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.project{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}.project-thumb{aspect-ratio:16/10;overflow:hidden;background:#edf2f8}.project-thumb img{width:100%;height:100%;object-fit:cover;transition:.3s}.project:hover .project-thumb img{transform:scale(1.025)}.project-body{padding:19px}.project h3{margin:0 0 7px;font-size:19px}.project p{font-size:14px;color:var(--muted);margin:0}.tags{display:flex;gap:7px;flex-wrap:wrap;margin:13px 0}.tag{font-size:11px;color:#245bb5;background:#eef5ff;border-radius:999px;padding:5px 8px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.service{border:1px solid var(--line);border-radius:12px;background:#fff;padding:23px}.service .icon{font-size:26px;color:var(--blue)}.service h3{font-size:17px;margin:9px 0 5px}.service p{font-size:14px;color:var(--muted);margin:0}
+.timeline{border-left:2px solid #dbe5f2;margin-left:10px;padding-left:30px}.timeline-item{position:relative;margin-bottom:34px}.timeline-item:before{content:"";position:absolute;left:-39px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px #e5efff}.timeline-meta{color:var(--blue);font-size:12px;font-weight:800}.timeline-item h3{margin:5px 0 2px}
+.cta{background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;padding:55px 0}.cta-grid{display:flex;align-items:center;justify-content:space-between;gap:30px}.cta h2{font-size:38px;margin:0 0 7px}.cta p{margin:0;color:#eaf2ff}.cta .btn{background:#fff;color:var(--blue);border-color:#fff}
+.site-footer{padding:48px 0 20px;border-top:1px solid var(--line)}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px}.footer-title{font-weight:800;margin-bottom:11px}.footer-links{display:grid;gap:7px;font-size:14px;color:var(--muted)}.copyright{display:flex;justify-content:space-between;border-top:1px solid var(--line);margin-top:32px;padding-top:17px;font-size:12px;color:var(--muted)}
+@media(max-width:900px){.menu{display:none}.hero-grid,.about-grid{grid-template-columns:1fr}.hero-photo{height:390px}.skills-grid{grid-template-columns:repeat(3,1fr)}.projects-grid{grid-template-columns:1fr 1fr}.services-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.cta-grid{flex-direction:column;align-items:flex-start}}
+@media(max-width:600px){.container{width:calc(100% - 28px)}.hero{padding:58px 0}.hero h1{font-size:42px}.hero-photo{height:350px}.stats{gap:20px}.section{padding:65px 0}.section h2{font-size:32px}.section-head{display:block}.skills-grid,.projects-grid,.services-grid,.footer-grid{grid-template-columns:1fr}.cta h2{font-size:32px}.copyright{display:block}.copyright span{display:block;margin-bottom:8px}}
+
+/* Static index.html support */
+.muted{color:var(--muted)}.view-all,.project-link{color:var(--blue);font-size:13px;font-weight:750}.skill-mark{height:34px;display:flex;align-items:center;justify-content:center;color:var(--blue);font-weight:850;font-size:21px;margin-bottom:7px}.skill-mark+*{}.service-icon{font-size:27px;color:var(--blue)}.exp-layout{display:grid;grid-template-columns:1.35fr .8fr;gap:60px;align-items:start}.highlights{background:var(--soft);border-radius:12px;padding:20px 23px}.highlights h4{margin:0 0 10px}.highlights ul{padding-left:19px;margin:0;color:var(--muted);font-size:14px}.highlights li{margin:8px 0}.light{color:#dbeaff}.btn-white{background:#fff;color:var(--blue);border-color:#fff}.cta-email{font-size:12px!important;margin-top:12px!important}.site-header .mobile-toggle{display:none;background:none;border:0;font-size:25px;color:var(--ink)}.menu.open{display:flex}
+@media(max-width:900px){.exp-layout{grid-template-columns:1fr}.site-header .mobile-toggle{display:block}.site-header .menu{display:none}.site-header .menu.open{display:flex;position:absolute;top:76px;left:0;right:0;background:#fff;padding:20px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}}
+
+/* ===== Animations ===== */
+@media (prefers-reduced-motion: no-preference){
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes fadeLeft{from{opacity:0;transform:translateX(-32px)}to{opacity:1;transform:translateX(0)}}
+@keyframes fadeRight{from{opacity:0;transform:translateX(32px)}to{opacity:1;transform:translateX(0)}}
+@keyframes scaleIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+@keyframes pulseDot{0%,100%{box-shadow:0 0 0 0 rgba(22,179,100,.45)}50%{box-shadow:0 0 0 6px rgba(22,179,100,0)}}
+@keyframes floatSoft{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes drawLine{from{height:0}to{height:100%}}
+
+/* Scroll-reveal base: JS toggles .is-visible when a .reveal element enters the viewport */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1);transition-delay:calc(var(--d,0) * 1ms)}
+.reveal.is-visible{opacity:1;transform:translateY(0)}
+.reveal-left{transform:translateX(-32px)}.reveal-left.is-visible{transform:translateX(0)}
+.reveal-right{transform:translateX(32px)}.reveal-right.is-visible{transform:translateX(0)}
+.reveal-scale{transform:scale(.92)}.reveal-scale.is-visible{transform:scale(1)}
+
+/* Hero: plays immediately on load, staggered */
+.hero .eyebrow{animation:fadeUp .7s cubic-bezier(.22,.61,.36,1) both;animation-delay:.05s}
+.hero h1{animation:fadeUp .8s cubic-bezier(.22,.61,.36,1) both;animation-delay:.15s}
+.hero p{animation:fadeUp .8s cubic-bezier(.22,.61,.36,1) both;animation-delay:.28s}
+.hero .actions{animation:fadeUp .8s cubic-bezier(.22,.61,.36,1) both;animation-delay:.4s}
+.hero .stats{animation:fadeUp .8s cubic-bezier(.22,.61,.36,1) both;animation-delay:.52s}
+.hero-photo{animation:scaleIn .9s cubic-bezier(.22,.61,.36,1) both;animation-delay:.25s}
+.hero-photo img{transition:transform .6s ease}
+.hero-photo:hover img{transform:scale(1.04)}
+.availability{animation:fadeUp .7s cubic-bezier(.22,.61,.36,1) both;animation-delay:.75s}
+.availability i{animation:pulseDot 2s ease-in-out infinite}
+
+/* Nav */
+.site-header{animation:fadeUp .5s ease both}
+.brand{transition:opacity .2s}.brand:hover{opacity:.75}
+.menu a{position:relative}
+.menu a:after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.22,.61,.36,1)}
+.menu a:hover:after{transform:scaleX(1)}
+.mobile-toggle{transition:transform .25s}
+.menu.open ~ .mobile-toggle,.mobile-toggle:active{transform:rotate(90deg)}
+
+/* Section headings — fade up as they enter */
+.eyebrow,.section h2,.cta h2{will-change:transform,opacity}
+
+/* Cards: hover lift + shadow, staggered entrance handled via .reveal + inline --d */
+.skill,.project,.service{transition:transform .35s cubic-bezier(.22,.61,.36,1),box-shadow .35s ease,border-color .35s ease}
+.skill:hover{transform:translateY(-6px);box-shadow:0 14px 28px rgba(16,24,40,.09);border-color:#cfe0ff}
+.project:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(16,24,40,.12)}
+.service:hover{transform:translateY(-6px);box-shadow:0 16px 32px rgba(16,24,40,.09);border-color:#cfe0ff}
+.service .icon,.service-icon{display:inline-block;transition:transform .35s ease}
+.service:hover .icon,.service:hover .service-icon{transform:rotate(12deg) scale(1.15)}
+.skill-mark{transition:transform .35s ease}
+.skill:hover .skill-mark{transform:scale(1.15)}
+.tag{transition:transform .2s ease,background .2s ease}
+.tag:hover{transform:translateY(-2px);background:#e2edff}
+
+/* Timeline: line "draws" in, dot pulses once visible */
+.timeline{position:relative}
+.timeline.is-visible:before{content:"";position:absolute;left:-2px;top:0;width:2px;background:var(--blue);animation:drawLine 1s cubic-bezier(.22,.61,.36,1) both}
+.timeline-item:before{transition:transform .4s cubic-bezier(.34,1.56,.64,1),box-shadow .4s ease}
+.timeline-item.is-visible:before{animation:scaleIn .5s cubic-bezier(.34,1.56,.64,1) both;animation-delay:.3s}
+
+/* Buttons: smoother lift + subtle press */
+.btn{transition:transform .25s cubic-bezier(.22,.61,.36,1),box-shadow .25s ease}
+.btn:hover{box-shadow:0 10px 22px rgba(23,105,255,.25)}
+.btn:active{transform:translateY(0) scale(.97)}
+
+/* CTA section: soft floating accent */
+.cta{position:relative;overflow:hidden}
+.cta:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 20%,rgba(255,255,255,.14),transparent 55%);animation:floatSoft 6s ease-in-out infinite}
+.cta .btn{position:relative;z-index:1}
+
+/* Footer links */
+.footer-links a{display:inline-block;transition:transform .2s ease,color .2s ease}
+.footer-links a:hover{transform:translateX(3px);color:var(--blue)}
+
+}
+
+/* Respect reduced-motion preference: no animation, content simply visible */
+@media (prefers-reduced-motion: reduce){
+.reveal{opacity:1;transform:none}
+.hero .eyebrow,.hero h1,.hero p,.hero .actions,.hero .stats,.hero-photo,.availability{animation:none}
+}
